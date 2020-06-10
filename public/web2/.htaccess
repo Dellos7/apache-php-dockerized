@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{TIME_HOUR} >=17
+RewriteRule ^recurso-por-hora\.html$ "/horario-restringido.php"
+RewriteCond %{TIME_HOUR} >=20
+RewriteRule ^recurso-por-hora-2\.html$ "-" [L,R=403]

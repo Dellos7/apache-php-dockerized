@@ -1,0 +1,7 @@
+# Evita que se le pida todo el rato la misma contraseña en esta "área"
+AuthName "Area restringida de web1"
+AuthType Basic
+# El fichero con contraseña que hemos
+AuthUserFile /home/david/.htpasswd
+# Permite acceder a cualquier usuario que introduzca su contraseña que esté en el fichero de contraseñas
+Require valid-user

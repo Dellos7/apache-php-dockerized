@@ -1,0 +1,12 @@
+Redirect 301 /permanent /redirects/permanent.html
+Redirect 302 /temp /redirects/temp.html
+Redirect 303 /seeother /redirects/seeother.html
+Redirect 410 /gone
+# Es una tontería, pero redirige "/<nombre>.png" a "/imagenes/<nombre>.jpg"
+RedirectMatch (.*)\.png$ /imagenes$1.jpg
+# Decir que ya no existen todas las imágenes ".png" de la ruta /foo
+RedirectMatch 410 "/foo/\.png$"
+
+ErrorDocument 401 /errorcodes/401_unauthorized.php
+ErrorDocument 403 /errorcodes/403_forbidden.php
+ErrorDocument 404 /errorcodes/404_notfound.php
